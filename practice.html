@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    label[for] {
+      cursor: pointer;
+      cursor: hand
+    }
+
+    li(margin:0 0 10px)
+
+
+
+  </style>
+
+  <script>
+  function showName()
+  {
+     var ffname=document.getElementById('fname').value;
+
+     alert("Hello " + ffname);
+  }
+  </script>
+
+</head>
+
+<body onload="alert('Event demo has loaded');" onunload="alert('Leaving demo')">
+
+  <form onreset="alert('Form reset');" onsubmit="alert('Form submit'); return flase;">
+    <ul>
+      <li>
+        <label for="fonblur">onblur:</label>
+        <input type="text" placeholder="click into field and then leave" size="40" id="fonblur" onblur="alert('Lost Focus');">
+      </li>
+      <li>
+        <label for="fonclick">onclick:</label>
+        <input type="button" value="click me" id="fonclick" onclick="alert('Button Clicked');">
+      </li>
+      <li>
+        <label for="fonchange">onchange:</label>
+        <input type="text" value="change this then leave" size="40" id="foncchange" onchange="alert('Changed!');">
+
+      </li>
+      <li>
+        <label for="fondblclick">ondblclick:</label>
+        <input type="button" value="Double Click me" id="fondblclick" ondblclick="alert('Button double clicked!');">
+      </li>
+      <li>
+        <label for="fonfocus">onfocus:</label>
+        <input type="text" value="click into field" id="fonfocus" onfocus="aler('Gained focus');">
+      </li>
+      <li>
+        <label for="fonkeydown">onkeydown:</label>
+        <input type="text" value="press key and release" size="40" id="fonkeydown" onkeydown="alert('key down');">
+      </li>
+      <li>
+        <label for="fonkeypress">onkeypress:</label>
+        <input type="text" value="Type here" size="40" id="fonkeypress" onkeypress="alert('key pressed');">
+      </li>
+      <li>onload:An alert was shown when document loaded</li>
+      <li>
+        <label for="fonmousedown">onmousedown:</label>
+        <input type="button" value="click and hold" id="fonmousedown" onmousedown="alert('Mouse down');">
+      </li>
+      <li>
+        onmousemove: Move mouse over this<a href="#" onmousemove="alert('Mouse moved');">here</a> and then here
+      </li>
+      <li>
+        <label for="fonmouseup">onmouseup:</label>
+        <input type="button" value="click and release" id="fonmouseup" onmouseup="alert('Mouse up');">
+      </li>
+      <li>
+        <label for="fonreset">onreset:</label>
+        <input type="reset" value="Reset demo" id="fonreset">
+      </li>
+      <li>
+        <label for="fonselect">onselect:</label>
+        <input type="text" value="Select this text" size="40" id="fonselect" onselect="alert('Selected');">
+      </li>
+      <li>
+        <label for="fonsubmit">onsubmit:</label>
+        <input type="submit" value="submit" id="fonsubmit">
+      </li>
+      <li>onunload: Try to leave document by following this<a href="JavaScriptTesting.html">link</a></li>
+      <li>
+        <label for="fname">name:</label>
+        <input type="text"  value="Ram" size="40" id="fname">
+        <input type="button" value="Great" onclick="showName();">
+      </li>
+    </ul>
+  </form>
+</body>
+
+</html>
